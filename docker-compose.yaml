@@ -1,0 +1,11 @@
+services:
+  nlp-service:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: ghcr.io/projeto-1-corretor-prova/nlp-service:latest
+    container_name: nlp-service
+    ports:
+      - "$PORT_API:8000"
+    env_file:
+      - .env
